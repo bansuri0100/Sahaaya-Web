@@ -1,0 +1,19 @@
+<%- include ("./partials/header") %>
+
+<h1><%=constituency%></h1>
+<br>
+<form action="/c/<%=constituency%>/cat" method="POST">
+    <label >Select Category:</label>
+    <select name="category">
+      <option value="BESCOM">BESCOM</option>
+      <option value="BWSSB">BWSSB</option>
+      <option value="ROADS">ROADS</option>
+      <option value="SANITATION">SANITATION</option>
+      <option value="CORRUPTION">CORRUPTION</option>
+      <option value="OTHER">OTHER</option>
+    </select>
+    <input type="submit" value="Submit">
+  </form>
+
+
+<%- include ("./partials/footer") %>

@@ -1,0 +1,16 @@
+<%- include ("./partials/header") %>
+
+<h1><%=querySnapshot.size%> Grievances</h1>
+<% querySnapshot.forEach(doc => { %>
+    <div class="container">
+        <p><%=doc.data().Category%></p>
+        <p><%=doc.data().Constituency%></p>
+        <p><%=doc.data().Resolved%></p>
+        <p><%=doc.data().email%></p>
+        <p><%=doc.data().Description%></p>
+        <p><%=doc.data().RefId%></p>
+        <br>
+    </div>
+<% }) %>
+
+<%- include ("./partials/footer") %>

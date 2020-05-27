@@ -67,8 +67,8 @@ app.post("/c/:constituency/cat", function (req, res) {
 // });
 
 
-app.listen(3000, function () {
-  console.log('Sahaaya server started')
-
+app.listen(process.env.PORT||3000,process.env.IP,function(){
+    console.log("Sahaaya server has started")
+  
 });
 
